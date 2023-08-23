@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            
+            page[size="A4"] {
+                background: white;
+                width: 21cm;
+                height: 29.7cm;
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 0.5cm;
+                box-shadow: 0 0 0.5cm rgba(0,0,0,0.1);
+                
+            }
+            
+        </style>
+        <meta charset="utf-8">
+            
+    </head>
+    <body>
+        
+        <page size="A4">
+            
+            <div id="body">
+                
+                <table width="100%" style="padding-top: 20px;padding-left: 20px;padding-right: 20px;">
+                    
+                    <tr>
+                        
+                        <td width="80%">生活型態評估及營養問卷
+                        </td>
+                        
+                        <td>
+                            <input type="date" id="date" name="date"/>
+                        </td>
+                        
+                    </tr>
+                    
+                </table>
+                
+                <table style="border: 0px solid black;padding-left: 20px;padding-right: 20px;">
+                    
+                    <tr>
+                        
+                        <td>
+                            姓名:<input type="text" id="name" name="name" style="width:80px;"/>
+                        </td>
+                        
+                        <td>
+                            性別:
+                            <select name="sex" id="sex">
+                                <option value="boy">男</option>
+                                <option value="girl">女</option>
+                                <option value="other">其他</option>
+                            </select>
+                        </td>
+                        
+                        <td>
+                            年齡:
+                            <input type="text" id="name" name="name" style="width:30px;"/>
+                        </td>
+                        
+                        <td>
+                            星座:
+                            <select name="sex" id="sex">
+                                <option value="boy">水瓶座</option>
+                                <option value="boy">雙魚座</option>
+                                <option value="boy">牡羊座</option>
+                                <option value="girl">金牛座</option>
+                                <option value="other">雙子座</option>
+                                <option value="boy">巨蟹座</option>
+                                <option value="boy">獅子座</option>
+                                <option value="boy">處女座</option>
+                                <option value="boy">天秤座</option>
+                                <option value="boy">天蠍座</option>
+                                <option value="boy">射手座</option>
+                                <option value="boy">魔羯座</option>
+                            </select>
+                        </td>
+                        
+                        <td>
+                            身高:
+                            <input type="text" id="name" name="name" style="width:30px;"/>
+                        </td>
+                        
+                        <td>
+                            體重:
+                            <input type="text" id="name" name="name" style="width:30px;"/>
+                        </td>
+                        
+                        <td>
+                            電話:
+                            <input type="text" id="name" name="name" style="width:100px;"/>
+                        </td>
+                        
+                    </tr>
+                    
+                </table>
+                
+                <hr  width="95%">
+                <table width="100%" style="padding-left: 20px;padding-right: 20px;">
+                    
+                    
+                    <tr>
+                        <td>
+                            工作類型:
+                            <select name="sex" id="sex">
+                                <option value="boy">上班族</option>
+                                <option value="girl">老闆</option>
+                                <option value="other">家庭主婦</option>
+                                <option value="other">學生</option>
+                                <option value="other">科技人員</option>
+                                <option value="other">銀髮族</option>
+                                <option value="other">勞工朋友</option>
+                            </select>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            早餐時間:
+                            <select name="sex" id="sex">
+                                <option value="boy">6:00 ~ 7:00</option>
+                                <option value="boy">7:00 ~ 8:00</option>
+                                <option value="boy">8:00 ~ 9:00</option>
+                                <option value="boy">9:00 ~ </option>
+                                <option value="boy">經常沒吃</option>
+                            </select>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            就寢時間:
+                            <select name="sex" id="sex">
+                                <option value="boy">10:00 ~ 11:00</option>
+                                <option value="boy">11:00 ~ 12:00</option>
+                                <option value="boy">12:00 ~ 1:00</option>
+                                <option value="boy">1:00 ~ </option>
+                                <option value="boy">經常通宵未睡</option>
+                            </select>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            飲用水源:
+                            <select name="sex" id="sex">
+                                <option value="boy">自來水</option>
+                                <option value="girl">買水</option>
+                                <option value="other">飲料</option>
+                                <option value="other">家用淨水器</option>
+                            </select>
+                            <input type="text" id="name" name="name" style="width:100px;"/>
+                            
+                        </td>
+                    </tr>
+                    
+                    
+                    
+                    <tr>
+                        <td>
+                            是否有食用營養補充品的習慣?:
+                            <select name="sex" id="sex">
+                                <option value="boy">有</option>
+                                <option value="girl">沒有</option>
+                                <option value="other">偶爾</option>
+                                <option value="other">曾經</option>
+                            </select>
+                        </td>
+                    </tr>
+                    
+                    
+                </table>
+                
+                <hr width="95%">
+                
+                <div style="padding-top: 10px;padding-left: 20px;padding-right: 20px">
+                    
+                    <table width="100%" style="border:1px solid black;border-collapse: collapse;">
+                        
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="1"/>刷牙流血</p>
+                                <p id="checkbox_1"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="2"/>發燒</p>
+                                <p id="checkbox_2"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="3"/>青春痘</p>
+                                <p id="checkbox_3"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="4"/>皮膚鬆弛</p>
+                                <p id="checkbox_4"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="5"/>骨質疏鬆</p>
+                                <p id="checkbox_5"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="6"/>脂肪肝</p>
+                                <p id="checkbox_6"></p>
+                            </td>
+                        </tr>
+                        
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="7"/>口角炎</p>
+                                <p id="checkbox_7"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="8"/>喉嚨痛</p>
+                                <p id="checkbox_8"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="9"/>臉過油</p>
+                                <p id="checkbox_9"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="10"/>皮膚過敏發炎</p>
+                                <p id="checkbox_10"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="11"/>抽筋</p>
+                                <p id="checkbox_11"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="12"/>肥胖</p>
+                                <p id="checkbox_12"></p>
+                            </td>
+                        </tr>
+                        
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="13"/>常打嗝</p>
+                                <p id="checkbox_13"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="14"/>容易腹瀉</p>
+                                <p id="checkbox_14"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="15"/>粉刺</p>
+                                <p id="checkbox_15"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="16"/>頭皮屑</p>
+                                <p id="checkbox_16"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="17"/>水腫</p>
+                                <p id="checkbox_17"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="18"/>靜脈曲張</p>
+                                <p id="checkbox_18"></p>
+                            </td>
+                        </tr>
+                        
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="19"/>口乾舌燥</p>
+                                <p id="checkbox_19"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="20"/>壓力熬夜</p>
+                                <p id="checkbox_20"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="21"/>黑斑</p>
+                                <p id="checkbox_21"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="22"/>落髮分叉禿頭</p>
+                                <p id="checkbox_22"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="23"/>尿路結石</p>
+                                <p id="checkbox_23"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="24"/>貧血</p>
+                                <p id="checkbox_24"></p>
+                            </td>
+                        </tr>
+                        
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="25"/>口臭</p>
+                                <p id="checkbox_25"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="26"/>常感冒</p>
+                                <p id="checkbox_26"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="27"/>皮膚粗糙</p>
+                                <p id="checkbox_27"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="28"/>多夢磨牙</p>
+                                <p id="checkbox_28"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="29"/>尿酸高(痛風)</p>
+                                <p id="checkbox_29"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="30"/>更年期</p>
+                                <p id="checkbox_30"></p>
+                            </td>
+                        </tr>
+                        
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="31"/>脹氣消化不良</p>
+                                <p id="checkbox_31"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="32"/>過敏打噴嚏</p>
+                                <p id="checkbox_32"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="33"/>濕疹</p>
+                                <p id="checkbox_33"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="34"/>肌肉關節酸痛</p>
+                                <p id="checkbox_34"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="35"/>攝護腺肥大</p>
+                                <p id="checkbox_35"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="36"/>膽結石</p>
+                                <p id="checkbox_36"></p>
+                            </td>
+                        </tr>
+                        
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="37"/>胃口不好</p>
+                                <p id="checkbox_37"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="38"/>便祕</p>
+                                <p id="checkbox_38"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="39"/>經期不順</p>
+                                <p id="checkbox_39"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="40"/>憂鬱沮喪</p>
+                                <p id="checkbox_40"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="41"/>膀胱無力頻尿</p>
+                                <p id="checkbox_41"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="42"/>抽菸喝酒檳榔</p>
+                                <p id="checkbox_42"></p>
+                            </td>
+                        </tr>
+                        
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="43"/>胃痛</p>
+                                <p id="checkbox_43"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="44"/>手腳冰冷</p>
+                                <p id="checkbox_44"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="45"/>經痛</p>
+                                <p id="checkbox_45"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="46">記憶力衰退</p>
+                                <p id="checkbox_46"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="47"/>血糖偏高</p>
+                                <p id="checkbox_47"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="48"/>老花眼白內障</p>
+                                <p id="checkbox_48"></p>
+                            </td>
+                        </tr>
+                        
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="49"/>常吃藥</p>
+                                <p id="checkbox_49"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="50"/>不易受孕</p>
+                                <p id="checkbox_50"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="51"/>孕吐</p>
+                                <p id="checkbox_51"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="52"/>失眠睡不好</p>
+                                <p id="checkbox_52"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="53"/>血壓偏高</p>
+                                <p id="checkbox_53"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="54"/>飛蚊症</p>
+                                <p id="checkbox_54"></p>
+                            </td>
+                        </tr>
+                        
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="55"/>疲倦</p>
+                                <p id="checkbox_55"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="56"/>白帶</p>
+                                <p id="checkbox_56"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="57"/>懷孕哺乳</p>
+                                <p id="checkbox_57"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="58"/>易怒不耐煩</p>
+                                <p id="checkbox_58"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="59"/>血脂偏高</p>
+                                <p id="checkbox_59"></p>
+                            </td>
+                            <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="60"/>3C族</p>
+                                <p id="checkbox_60"></p>
+                            </td>
+                        </tr>
+                        
+                    </table>
+                    
+                </div>
+                
+                <hr width="95%">
+                
+                <div style="padding-left: 20px;padding-right: 20px">
+                    
+                    <table width="100%" style="border:1px solid black;border-collapse: collapse;">
+                        
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id="ans_1">蛋白質</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id="ans_2">DX</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id="ans_3">A</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id="ans_4">B</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id="ans_5">C</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id="ans_6">E</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id="ans_7">Fe</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id="ans_8">CaMg</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id="ans_9">纖維</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id="ans_10">水</p>
+                            </td>
+                        </tr>
+                        
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id="questionnair_1">&ensp;</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id='questionnair_2'>&ensp;</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id='questionnair_3'>&ensp;</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id='questionnair_4'>&ensp;</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id='questionnair_5'>&ensp;</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id='questionnair_6'>&ensp;</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id='questionnair_7'>&ensp;</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id='questionnair_8'>&ensp;</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id='questionnair_9'>&ensp;</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id='questionnair_10'>&ensp;</p>
+                            </td>
+                        </tr>
+                        
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                
+                                <p id="ans_11">甘草</p>
+
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                
+                                <p id="ans_12">卵磷脂</p>
+
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                
+                                <p id="ans_13">大蒜</p>
+
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                
+                                <p id="ans_14">乳酸菌</p>
+
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                
+                                <p id="ans_15">橄欖油</p>
+
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                
+                                <p id="ans_16">紫錐花</p>
+
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                
+                                <p id="ans_17">消化酵素</p>
+
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                
+                                <p id="ans_18">魚油</p>
+
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                
+                                <p id="ans_19">鋸棕櫚</p>
+
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                
+                                <p id="ans_20">月見草</p>
+
+                            </td>
+                        </tr>
+                        
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id='questionnair_11'>&ensp;</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id='questionnair_12'>&ensp;</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id='questionnair_13'>&ensp;</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id='questionnair_14'>&ensp;</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id='questionnair_15'>&ensp;</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id='questionnair_16'>&ensp;</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id='questionnair_17'>&ensp;</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id='questionnair_18'>&ensp;</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id='questionnair_19'>&ensp;</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id='questionnair_20'>&ensp;</p>
+                            </td>
+                        </tr>
+                        
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                
+                                <p id="ans_21">薑黃素</p>
+
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                
+                                <p id="ans_22">肉蓯蓉</p>
+
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                
+                                <p id="ans_23">晶明錠</p>
+
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                               
+                                <p id="ans_24">綠茶素</p>
+
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                
+                                <p id="ans_25">早餐</p>
+
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                
+                                <p id="ans_26">活力纖姿</p>
+
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                
+                                <p id="ans_27">GLA</p>
+
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                
+                                <p id="ans_28">鉻</p>
+
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                
+                                <p id="ans_29">鋅</p>
+
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                
+                                <p id="ans_30">Q10</p>
+
+                            </td>
+                        </tr>
+                        
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id='questionnair_21'>&ensp;</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id='questionnair_22'>&ensp;</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id='questionnair_23'>&ensp;</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id='questionnair_24'>&ensp;</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id='questionnair_25'>&ensp;</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id='questionnair_26'>&ensp;</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id='questionnair_27'>&ensp;</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id='questionnair_28'>&ensp;</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id='questionnair_29'>&ensp;</p>
+                            </td>
+                            <td align="center" valign="middle" style="border:1px solid black;border-collapse: collapse;">
+                                <p id='questionnair_30'>&ensp;</p>
+                            </td>
+                        </tr>
+                        
+                    </table>
+                    
+                </div>
+                
+                <hr width="95%">
+                
+                <center>給對材料做對事,加上足夠的時間,人體是最好的醫生</center>
+                
+            </div>
+            
+            <center style="padding-top: 20px;">
+                
+                <button id="clearAll" >
+                    清除
+                </button>
+                
+                <button id="download" >
+                    下載
+                </button>
+                
+            </center>
+            
+        </page>
+        
+        <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+        
+        <script type="text/javascript">
+            
+            document.getElementById("date").valueAsDate = new Date();
+            
+            var datas = [
+                            
+                              [5],
+                              [1,5,8,9],
+                              [3,4],
+                              [1,5,10],
+                              [5,8],
+                              [1,4,5,11,12],
+                              [4],
+                              [4,5,8,12],
+                              [3,4,12],
+                              [1,4,5,8],
+                              
+                              [4,8],
+                              [1,4,9,12],
+                              [4,8],
+                              [1,4,13,14],
+                              [3],
+                              [3,4,15],
+                              [1,4,8],
+                              [1,5,6],
+                              [3,4],
+                              [1,4],
+                              
+                              [5,6,12],
+                              [1,4,12],
+                              [3,4,5,8,10],
+                              [1,4,6,7],
+                              [4],
+                              [1,3,5,16],
+                              [3,12,15],
+                              [4,8,12],
+                              [1,4,5,10],
+                              [11],
+                              
+                              [3,4,8,,14,17],
+                              [1,3,5,6],
+                              [4,15,18],
+                              [4,6,8,15,18],
+                              [1,3,19],
+                              [3,17,25],
+                              [1,4,26],
+                              [4,8,9,10,12],
+                              [1,27],
+                              [1,4,8,12,18],
+                              
+                              [1,4,6,14],
+                              [3,4,5,6],
+                              [1],
+                              [1,6,12,21],
+                              [1,4,8,27],
+                              [1,7,12,22],
+                              [1,9,28],
+                              [4,5,23],
+                              [4,5],
+                              [1,3,6,7,27,29],
+                              
+                              [4],
+                              [4,8],
+                              [4,8,18,24],
+                              [3,5,23],
+                              [1,4],
+                              [3,4,13,14],
+                              [1,2,4,8,12,17],
+                              [4,8,17],
+                              [4,12,13,24],
+                              [3,4,23],
+
+                ];
+                
+            var questionnairArray = [0,0,0,0,0,0,0,0,0,0,
+                                     0,0,0,0,0,0,0,0,0,0,
+                                     0,0,0,0,0,0,0,0,0,0
+                                     ];
+            
+            function checkBoxChange(e){
+                
+                const checkBox = e.target;
+                const count = parseInt(checkBox.value);
+                const target = datas[count - 1];
+                
+                var result = "";
+                
+                target.forEach(function(value){
+                    
+                   if (checkBox.checked){
+                       
+                       questionnairArray[value - 1] = questionnairArray[value - 1] + 1;
+                       const lable = document.getElementById('ans_' + value);
+
+                       result += lable.innerHTML
+                       result += ","
+                       
+                   }else{
+                       questionnairArray[value - 1] = questionnairArray[value - 1] - 1;
+                   }
+                    
+                });
+                
+                if (result == ""){
+                    result = "&ensp;";
+                }else{
+                    result = result.slice(0, -1);
+                }
+                
+                var boxString = document.getElementById('checkbox_' + checkBox.value);
+                boxString.innerHTML = result;
+
+                setQuestionnair();
+
+            }
+            
+            function setQuestionnair(){
+
+                var count = 1;
+                
+                questionnairArray.forEach(function(value){
+                    
+                    const lable_id = 'questionnair_' + count.toString();
+                    const lable = document.getElementById(lable_id);
+                    
+                    if (value == 0){
+                        lable.innerHTML = "&ensp;";
+                    }else{
+                        lable.innerHTML = value.toString();
+                    }
+                                        
+                    count += 1;
+                  
+                });
+                
+            }
+            
+            document.getElementById('clearAll').addEventListener('click', function(){
+                location.reload();
+            });
+            
+            document.getElementById('download').addEventListener('click', function() {
+                
+                html2canvas(document.querySelector("#body")).then(function (canvas) {
+                    a = document.createElement('a');
+                    a.href = canvas.toDataURL("image/png", 1).replace("image/png", "image/octet-stream");
+                    a.download = 'image.png';
+                    a.click();
+                });
+                
+                
+            });
+            
+        </script>
+        
+    </body>
+    
+</html>
+
+
+
+
+
+
