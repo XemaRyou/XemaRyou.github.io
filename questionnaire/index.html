@@ -850,15 +850,19 @@
                 let sleep_time_object = document.getElementById('sleep_time');
                 sleep_time_object.value = sleep_time;
 
-                let other_water = search.split('&')[11].split('=')[1];
+                let water = search.split('&')[11].split('=')[1];
+                let water_object = document.getElementById('water');
+                water_object.value = water;
+
+                let other_water = search.split('&')[12].split('=')[1];
                 let other_water_object = document.getElementById('other_water');
                 other_water_object.value = other_water;
 
-                let use_supplements = search.split('&')[12].split('=')[1];
+                let use_supplements = search.split('&')[13].split('=')[1];
                 let use_supplements_object = document.getElementById('use_supplements');
                 use_supplements_object.value = use_supplements;
 
-                let result = search.split('&')[13].split('=')[1];
+                let result = search.split('&')[14].split('=')[1];
                 
                 for(i=0;i<60;i++){
 
