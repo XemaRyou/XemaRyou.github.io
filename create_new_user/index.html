@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2735595286813217"
+     crossorigin="anonymous"></script>
+            
+    </head>
+    <body>
+        
+        <page size="A4">
+            
+            <div id="body" style="padding-bottom: 20px;">
+                
+                <table style="border: 0px solid black;padding-left: 20px;padding-right: 20px;">
+                    
+                    <tr>
+                        
+                        <td>
+                            姓名:<input type="text" id="name" name="name" style="width:80px;"/>
+                        </td>
+                        
+                        <td>
+                            會員ID:<input type="text" id="user_id" name="user_id" style="width:80px;"/>
+                        </td>
+
+                        <td>
+                            密碼:<input type="text" id="password" name="password" style="width:80px;"/>
+                        </td>
+                        
+                    </tr>
+                    
+                </table>
+                
+                <hr  width="95%">
+                
+            </div>
+            
+            <center style="padding-top: 20px;padding-bottom: 20px;">
+                
+                <button id="create_new_user" >
+                    新增
+                </button>
+                
+            </center>
+            
+        </page>
+                
+        <script type="text/javascript">
+            
+            document.getElementById('create_new_user').addEventListener('click', function(){
+
+                let name_object = document.getElementById('name');
+                let name = 'name=' + name_object.value;
+
+                let user_id_object = document.getElementById('user_id');
+                let user_id = 'user_id=' + user_id_object.value;
+
+                let password_object = document.getElementById('password');
+                let password = 'password=' + password_object.value;
+
+                var url = 'https://sulioart.baseqi.com/zh_TW/questionnaire/create_new_user?'
+
+                url += name;
+                url += '&';
+
+                url += user_id;
+                url += '&';
+
+                url += password;
+            
+                window.location = url;
+
+            });
+            
+        </script>
+        
+    </body>
+    
+</html>
+
+
+
+
+
+
