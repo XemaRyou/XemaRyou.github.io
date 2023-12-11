@@ -205,10 +205,10 @@
                     
                     <table width="100%" style="border:1px solid black;border-collapse: collapse;">
 
-                        <tr style="border:1px solid black;border-collapse: collapse;" ontouchstart="ontouchcellstart('checkbox_1')">
+                        <tr style="border:1px solid black;border-collapse: collapse;" ontouchstart="touchCheckBox('checkbo_1')">
 
                             <td width="16.6%" style="border:1px solid black;border-collapse: collapse;">
-                                <p><input id="checkbox_1" type="checkbox" onchange="checkBoxChange(event)" value="1"/>刷牙流血</p>
+                                <p><input id="checkbo_1" type="checkbox" onchange="checkBoxChange(event)" value="1"/>刷牙流血</p>
                             </td>
                             
                         </tr>
@@ -742,10 +742,10 @@
                 };
             }
 
-            function ontouchcellstart(value) {
+            function touchCheckBox(id){
 
-                const checkBox = document.getElementById(value);
-                checkBox.checked = !checked.checked;
+                const checkbox = document.getElementById(id);
+                checkbox.checked = !checkbox.checked;
 
             }
             
@@ -858,16 +858,16 @@
 
             });
             
-            document.getElementById('download').addEventListener('click', function() {
+            // document.getElementById('download').addEventListener('click', function() {
                 
-                html2canvas(document.querySelector("#body")).then(function (canvas) {
-                    a = document.createElement('a');
-                    a.href = canvas.toDataURL("image/png", 1).replace("image/png", "image/octet-stream");
-                    a.download = 'image.png';
-                    a.click();
-                });
+            //     html2canvas(document.querySelector("#body")).then(function (canvas) {
+            //         a = document.createElement('a');
+            //         a.href = canvas.toDataURL("image/png", 1).replace("image/png", "image/octet-stream");
+            //         a.download = 'image.png';
+            //         a.click();
+            //     });
                 
-            });
+            // });
             
         </script>
         
