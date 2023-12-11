@@ -3,7 +3,7 @@
     <head>
         <style>
             
-            page[size="A4"] {
+            /*page[size="A4"] {
                 background: white;
                 width: 21cm;
                 height: 29.7cm;
@@ -11,7 +11,7 @@
                 margin: 0 auto;
                 margin-bottom: 0.5cm;
                 
-            }
+            }*/
 
            /* input[type='checkbox'] {
                 accent-color: red;
@@ -34,13 +34,19 @@
                     
                     <tr>
                         
-                        <td width="80%">生活型態評估及營養問卷
+                        <td width="80%" style="text-align: center;">生活型態評估及營養問卷
+                        </td>
+
+                        <td>
+                            <p id="demo"></p>
                         </td>
                         
+                    </tr>
+
+                    <tr>
                         <td>
                             <input type="date" id="date" name="date"/>
                         </td>
-                        
                     </tr>
                     
                 </table>
@@ -52,7 +58,10 @@
                         <td>
                             姓名:<input type="text" id="name" name="name" style="width:80px;"/>
                         </td>
-                        
+
+                    </tr>
+
+                    <tr>
                         <td>
                             性別:
                             <select name="gender" id="gender">
@@ -62,11 +71,17 @@
                             </select>
                         </td>
                         
+                    </tr>
+
+                    <tr>
                         <td>
                             年齡:
                             <input type="text" id="age" name="age" style="width:30px;"/>
                         </td>
                         
+                    </tr>
+
+                    <tr>
                         <td>
                             星座:
                             <select name="constellations" id="constellations">
@@ -85,21 +100,31 @@
                             </select>
                         </td>
                         
+                    </tr>
+
+                    <tr>
                         <td>
                             身高:
                             <input type="text" id="height" name="height" style="width:30px;"/>
                         </td>
                         
+                        
+                    </tr>
+
+                    <tr>
                         <td>
                             體重:
                             <input type="text" id="weight" name="weight" style="width:30px;"/>
                         </td>
                         
+                        
+                    </tr>
+
+                    <tr>
                         <td>
                             電話:
                             <input type="text" id="phone" name="phone" style="width:100px;"/>
                         </td>
-                        
                     </tr>
                     
                 </table>
@@ -175,225 +200,501 @@
                         </td>
                     </tr>
                     
-                    
                 </table>
                 
                 <hr width="95%">
-                
+
+
                 <div style="padding-top: 10px;padding-left: 20px;padding-right: 20px">
                     
                     <table width="100%" style="border:1px solid black;border-collapse: collapse;">
-                        
+
                         <tr style="border:1px solid black;border-collapse: collapse;">
-                            
+
                             <td width="16.6%" style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="1"/>刷牙流血</p>
                             </td>
+                            
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
                             <td width="16.6%" style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="2"/>發燒</p>
                             </td>
-                            <td swidth="16.6%" tyle="border:1px solid black;border-collapse: collapse;">
+                            
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
+                            <td width="16.6%" style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="3"/>青春痘</p>
                             </td>
+                            
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
                             <td width="16.6%" style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="4"/>皮膚鬆弛</p>
                             </td>
+                            
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
                             <td width="16.6%" style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="5"/>骨質疏鬆</p>
                             </td>
+                            
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
                             <td width="16.6%" style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="6"/>脂肪肝</p>
                             </td>
-
+                            
                         </tr>
-                        
+
                         <tr style="border:1px solid black;border-collapse: collapse;">
+
                             <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="7"/>口角炎</p>
                             </td>
+                            
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
                             <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="8"/>喉嚨痛</p>
                             </td>
+                            
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
                             <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="9"/>臉過油</p>
                             </td>
+                            
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
                             <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="10"/>皮膚過敏發炎</p>
                             </td>
-                            <td style="border:1px solid black;border-collapse: collapse;">
+                            
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
+                             <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="11"/>抽筋</p>
                             </td>
+                            
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
                             <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="12"/>肥胖</p>
                             </td>
+                            
                         </tr>
 
                         <tr style="border:1px solid black;border-collapse: collapse;">
+
                             <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="13"/>常打嗝</p>
                             </td>
+                            
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
                             <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="14"/>容易腹瀉</p>
                             </td>
+                            
+                        </tr>
+                        
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
                             <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="15"/>粉刺</p>
                             </td>
+                            
+                        </tr>
+                        
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
                             <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="16"/>頭皮屑</p>
                             </td>
+                            
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
                             <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="17"/>水腫</p>
                             </td>
+                            
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
                             <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="18"/>靜脈曲張</p>
                             </td>
+                            
                         </tr>
 
                         <tr style="border:1px solid black;border-collapse: collapse;">
+
                             <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="19"/>口乾舌燥</p>
                             </td>
+                            
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
                             <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="20"/>壓力熬夜</p>
                             </td>
+                            
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
                             <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="21"/>黑斑</p>
                             </td>
+                            
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
                             <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="22"/>落髮分叉禿頭</p>
                             </td>
+                            
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
                             <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="23"/>尿路結石</p>
                             </td>
+                            
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
                             <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="24"/>貧血</p>
                             </td>
+                            
                         </tr>
-                        
+
                         <tr style="border:1px solid black;border-collapse: collapse;">
+
                             <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="25"/>口臭</p>
                             </td>
+                            
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
                             <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="26"/>常感冒</p>
                             </td>
-                            <td style="border:1px solid black;border-collapse: collapse;">
+                            
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
+                             <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="27"/>皮膚粗糙</p>
                             </td>
+                            
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
                             <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="28"/>多夢磨牙</p>
                             </td>
+                            
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
                             <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="29"/>尿酸高(痛風)</p>
                             </td>
-                            <td style="border:1px solid black;border-collapse: collapse;">
-                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="30"/>更年期</p>
-                            </td>
+                            
+                            
                         </tr>
                         
                         <tr style="border:1px solid black;border-collapse: collapse;">
+
                             <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="30"/>更年期</p>
+                            </td>
+                            
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
+                           <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="31"/>脹氣消化不良</p>
                             </td>
-                            <td style="border:1px solid black;border-collapse: collapse;">
+                            
+                        </tr>
+
+                         <tr style="border:1px solid black;border-collapse: collapse;">
+
+                           <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="32"/>過敏打噴嚏</p>
                             </td>
-                            <td style="border:1px solid black;border-collapse: collapse;">
+                            
+                        </tr>
+
+                         <tr style="border:1px solid black;border-collapse: collapse;">
+
+                           <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="33"/>濕疹</p>
                             </td>
-                            <td style="border:1px solid black;border-collapse: collapse;">
+                            
+                        </tr>
+
+                         <tr style="border:1px solid black;border-collapse: collapse;">
+
+                           <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="34"/>肌肉關節酸痛</p>
                             </td>
-                            <td style="border:1px solid black;border-collapse: collapse;">
+                            
+                        </tr>
+
+                         <tr style="border:1px solid black;border-collapse: collapse;">
+
+                           <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="35"/>攝護腺肥大</p>
                             </td>
-                            <td style="border:1px solid black;border-collapse: collapse;">
+                            
+                        </tr>
+
+                         <tr style="border:1px solid black;border-collapse: collapse;">
+
+                           <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="36"/>膽結石</p>
                             </td>
+                            
                         </tr>
 
-                        <tr style="border:1px solid black;border-collapse: collapse;">
-                            <td style="border:1px solid black;border-collapse: collapse;">
+                         <tr style="border:1px solid black;border-collapse: collapse;">
+
+                           <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="37"/>胃口不好</p>
                             </td>
-                            <td style="border:1px solid black;border-collapse: collapse;">
-                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="38"/>便祕</p>
-                            </td>
-                            <td style="border:1px solid black;border-collapse: collapse;">
-                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="39"/>經期不順</p>
-                            </td>
-                            <td style="border:1px solid black;border-collapse: collapse;">
-                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="40"/>憂鬱沮喪</p>
-                            </td>
-                            <td style="border:1px solid black;border-collapse: collapse;">
-                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="41"/>膀胱無力頻尿</p>
-                            </td>
-                            <td style="border:1px solid black;border-collapse: collapse;">
-                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="42"/>抽菸喝酒檳榔</p>
-                            </td>
+                            
                         </tr>
 
-                        <tr style="border:1px solid black;border-collapse: collapse;">
-                            <td style="border:1px solid black;border-collapse: collapse;">
+                         <tr style="border:1px solid black;border-collapse: collapse;">
+
+                           <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="38"/>便祕</p>
+                            </td>
+                            
+                        </tr>
+
+                         <tr style="border:1px solid black;border-collapse: collapse;">
+
+                           <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="39"/>經期不順</p>
+                            </td>
+                            
+                        </tr>
+
+                         <tr style="border:1px solid black;border-collapse: collapse;">
+
+                           <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="40"/>憂鬱沮喪</p>
+                            </td>
+                            
+                        </tr>
+
+                         <tr style="border:1px solid black;border-collapse: collapse;">
+
+                           <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="41"/>膀胱無力頻尿</p>
+                            </td>
+                            
+                        </tr>
+
+                         <tr style="border:1px solid black;border-collapse: collapse;">
+
+                           <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="42"/>抽菸喝酒檳榔</p>
+                            
+                        </tr>
+
+                         <tr style="border:1px solid black;border-collapse: collapse;">
+
+                           <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="43"/>胃痛</p>
                             </td>
-                            <td style="border:1px solid black;border-collapse: collapse;">
+                            
+                        </tr>
+
+                         <tr style="border:1px solid black;border-collapse: collapse;">
+
+                           <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="44"/>手腳冰冷</p>
                             </td>
-                            <td style="border:1px solid black;border-collapse: collapse;">
+                            
+                        </tr>
+
+                         <tr style="border:1px solid black;border-collapse: collapse;">
+
+                           <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="45"/>經痛</p>
                             </td>
-                            <td style="border:1px solid black;border-collapse: collapse;">
+                        
+                        </tr>
+
+                         <tr style="border:1px solid black;border-collapse: collapse;">
+
+                           <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="46">記憶力衰退</p>
                             </td>
+                            
+                        </tr>
+
+                         <tr style="border:1px solid black;border-collapse: collapse;">
+
                             <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="47"/>血糖偏高</p>
                             </td>
-                            <td style="border:1px solid black;border-collapse: collapse;">
-                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="48"/>老花眼白內障</p>
-                            </td>
+                            
                         </tr>
 
-                        <tr style="border:1px solid black;border-collapse: collapse;">
-                            <td style="border:1px solid black;border-collapse: collapse;">
+                         <tr style="border:1px solid black;border-collapse: collapse;">
+
+                           <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="48"/>老花眼白內障</p>
+                            </td>
+                            
+                        </tr>
+
+                         <tr style="border:1px solid black;border-collapse: collapse;">
+
+                           <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="49"/>常吃藥</p>
                             </td>
+                            
+                        </tr>
+                        
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
                             <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="50"/>不易受孕</p>
                             </td>
-                            <td style="border:1px solid black;border-collapse: collapse;">
-                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="51"/>孕吐</p>
-                            </td>
-                            <td style="border:1px solid black;border-collapse: collapse;">
-                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="52"/>失眠睡不好</p>
-                            </td>
-                            <td style="border:1px solid black;border-collapse: collapse;">
-                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="53"/>血壓偏高</p>
-                            </td>
-                            <td style="border:1px solid black;border-collapse: collapse;">
-                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="54"/>飛蚊症</p>
-                            </td>
+                            
                         </tr>
 
                         <tr style="border:1px solid black;border-collapse: collapse;">
-                            <td style="border:1px solid black;border-collapse: collapse;">
+                           
+                           <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="51"/>孕吐</p>
+                            </td>
+                             
+                           
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
+                           <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="52"/>失眠睡不好</p>
+                            </td>
+                            
+                            
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
+                           <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="53"/>血壓偏高</p>
+                            </td>
+                            
+                            
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
+                           <td style="border:1px solid black;border-collapse: collapse;">
+                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="54"/>飛蚊症</p>
+                            </td>
+                            
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
+                           <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="55"/>疲倦</p>
                             </td>
-                            <td style="border:1px solid black;border-collapse: collapse;">
+                            
+                            
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
+                           <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="56"/>白帶</p>
                             </td>
-                            <td style="border:1px solid black;border-collapse: collapse;">
+                            
+                            
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
+                           <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="57"/>懷孕哺乳</p>
                             </td>
-                            <td style="border:1px solid black;border-collapse: collapse;">
+                            
+                            
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
+                           <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="58"/>易怒不耐煩</p>
                             </td>
-                            <td style="border:1px solid black;border-collapse: collapse;">
+                            
+                            
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
+                           <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="59"/>血脂偏高</p>
                             </td>
-                            <td style="border:1px solid black;border-collapse: collapse;">
+                            
+                            
+                        </tr>
+
+                        <tr style="border:1px solid black;border-collapse: collapse;">
+
+                           <td style="border:1px solid black;border-collapse: collapse;">
                                 <p><input type="checkbox" onchange="checkBoxChange(event)" value="60"/>3C族</p>
                             </td>
+                            
                         </tr>
 
                     </table>
@@ -405,15 +706,15 @@
                 
             </div>
             
-            <center style="padding-top: 20px;padding-bottom: 20px;">
+            <center style="padding-top: 10px;padding-bottom: 10px;">
                 
                 <button id="save" >
                     紀錄
                 </button>
                 
-                <button id="download" >
+               <!--  <button id="download" >
                     下載
-                </button>
+                </button> -->
                 
             </center>
             
@@ -422,7 +723,7 @@
         <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
         
         <script type="text/javascript">
-            
+
             document.getElementById("date").valueAsDate = new Date();
                 
             var questionnairArray = [0,0,0,0,0,0,0,0,0,0,
@@ -443,6 +744,10 @@
                 }else{
                     questionnairArray[count - 1] = 0;
                 };
+            }
+
+            function myFunction() {
+                document.getElementById("demo").innerHTML = "Hello World";
             }
             
             document.getElementById('save').addEventListener('click', function(){
