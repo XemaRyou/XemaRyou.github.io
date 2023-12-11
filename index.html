@@ -36,10 +36,6 @@
                         
                         <td width="80%" style="text-align: center;">生活型態評估及營養問卷
                         </td>
-
-                        <td>
-                            <p id="demo"></p>
-                        </td>
                         
                     </tr>
 
@@ -209,10 +205,10 @@
                     
                     <table width="100%" style="border:1px solid black;border-collapse: collapse;">
 
-                        <tr style="border:1px solid black;border-collapse: collapse;" ontouchstart="myFunction(event)">
+                        <tr style="border:1px solid black;border-collapse: collapse;" ontouchstart="ontouchcellstart('checkbox_1')">
 
                             <td width="16.6%" style="border:1px solid black;border-collapse: collapse;">
-                                <p><input type="checkbox" onchange="checkBoxChange(event)" value="1"/>刷牙流血</p>
+                                <p><input id="checkbox_1" type="checkbox" onchange="checkBoxChange(event)" value="1"/>刷牙流血</p>
                             </td>
                             
                         </tr>
@@ -746,8 +742,11 @@
                 };
             }
 
-            function myFunction() {
-                document.getElementById("demo").innerHTML = "Hello World";
+            function ontouchcellstart(value) {
+
+                const checkBox = document.getElementById(value);
+                checkBox.checked = !checked.checked;
+
             }
             
             document.getElementById('save').addEventListener('click', function(){
