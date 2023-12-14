@@ -744,8 +744,16 @@
 
             function touchCheckBox(id){
 
-                const checkbox = document.getElementById(id);
-                checkbox.checked = !checkbox.checked;
+                const checkBox = document.getElementById(id);
+                checkBox.checked = !checkBox.checked;
+
+                const count = parseInt(checkBox.value);
+
+                if (checkBox.checked){
+                    questionnairArray[count - 1] = 1;
+                }else{
+                    questionnairArray[count - 1] = 0;
+                };
 
             }
             
@@ -798,7 +806,7 @@
 
                 // var url = 'http://127.0.0.1:8069/questionnaire/create_new_questionnaire?';
                 var url = 'https://sulioart.baseqi.com/questionnaire/create_new_questionnaire?';
-                
+
                 url += user_id;
                 url += '&';
 
@@ -853,8 +861,11 @@
 
 
                 url += result;
+
+                // console.log(result);
             
                 window.location = url;
+
 
             });
             
