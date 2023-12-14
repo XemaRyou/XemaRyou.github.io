@@ -931,40 +931,40 @@
 
                 let result = search.split('&')[14].split('=')[1];
                 
-                // for(i=0;i<60;i++){
+                for(i=0;i<60;i++){
 
-                //     let select = result[i];
-                //     let checkBox = document.getElementById('checkbox_input_' + (i + 1).toString());
+                    let select = result[i];
+                    let checkBox = document.getElementById('checkbox_input_' + (i + 1).toString());
 
-                //     if (select == '1'){
+                    if (select == '1'){
 
-                //         checkBox.checked = true;
-                //         const target = datas[i];
+                        checkBox.checked = true;
+                        const target = datas[i];
 
-                //         var text = "";
+                        var text = "";
                 
-                //         target.forEach(function(value){
+                        target.forEach(function(value){
                     
-                //             questionnairArray[value - 1] = questionnairArray[value - 1] + 1;
-                //             const lable = document.getElementById('ans_' + value);
+                            questionnairArray[value - 1] = questionnairArray[value - 1] + 1;
+                            const lable = document.getElementById('ans_' + value);
 
-                //             text += lable.innerHTML
-                //             text += ","
+                            text += lable.innerHTML
+                            text += ","
                     
-                //         });
+                        });
                 
-                //         if (text == ""){
-                //             text = "&ensp;";
-                //         }else{
-                //             text = text.slice(0, -1);
-                //         }
+                        if (text == ""){
+                            text = "&ensp;";
+                        }else{
+                            text = text.slice(0, -1);
+                        }
                         
-                //         var boxString = document.getElementById('checkbox_' + (i + 1).toString());
-                //         boxString.innerHTML = text;
+                        var boxString = document.getElementById('checkbox_' + (i + 1).toString());
+                        boxString.innerHTML = text;
 
-                //     }
+                    }
 
-                // }
+                }
             
                 setQuestionnair();
 
