@@ -875,25 +875,25 @@
                     if (select == '1'){
 
                         checkBox.checked = true;
-                        // const target = datas[i];
+                        const target = datas[i];
 
-                        // var text = "";
+                        var text = "";
                 
-                        // target.forEach(function(value){
+                        target.forEach(function(value){
                     
-                        //     questionnairArray[value - 1] = questionnairArray[value - 1] + 1;
-                        //     const lable = document.getElementById('ans_' + value);
+                            questionnairArray[value - 1] = questionnairArray[value - 1] + 1;
+                            const lable = document.getElementById('ans_' + value);
 
-                        //     text += lable.innerHTML
-                        //     text += ","
+                            text += lable.innerHTML
+                            text += ","
                     
-                        // });
+                        });
                 
-                        // if (text == ""){
-                        //     text = "&ensp;";
-                        // }else{
-                        //     text = text.slice(0, -1);
-                        // }
+                        if (text == ""){
+                            text = "&ensp;";
+                        }else{
+                            text = text.slice(0, -1);
+                        }
                         
                         // var boxString = document.getElementById('checkbox_' + (i + 1).toString());
                         // boxString.innerHTML = text;
